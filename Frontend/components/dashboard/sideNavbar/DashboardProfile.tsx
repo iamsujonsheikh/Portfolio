@@ -10,6 +10,7 @@ const DashboardProfile = () => {
                     src={"https://i.ibb.co.com/JjpyC37M/cartoon-pic.jpg"}
                     width={50}
                     height={50}
+                    loading='eager'
                     alt='profile-pic'
                     className='rounded-full grayscale ring-2 ring-blue-500 group-hover:grayscale-0 duration-300 '
                 />

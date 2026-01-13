@@ -9,7 +9,7 @@ import testimonials from "@/data/testmonialDB";
 const Testimonials = () => {
   return (
     <section>
-      <div className="flex justify-center items-center space-x-4 py-6 sm:py-12">
+      <div className="flex justify-center items-center space-x-4 py-6 sm:py-5">
         <Image
           src="/assets/icons/mic.png"
           width={50}

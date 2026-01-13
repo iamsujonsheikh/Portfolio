@@ -13,7 +13,6 @@ const ProjectsTable = () => {
     const [projects, setProjects] = useState<any[]>(projectsDB);
     const [openMenuId, setOpenMenuId] = useState<any>(null);
     const [searchQuery, setSearchQuery] = useState('');
-    const [categoryFilter, setCategoryFilter] = useState('all');
 
     // MODAL STATE
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
@@ -52,10 +51,9 @@ const ProjectsTable = () => {
         return projects.filter(project => {
             const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 project.technologies.some((tech: string) => tech.toLowerCase().includes(searchQuery.toLowerCase()));
-            const matchesCategory = categoryFilter === 'all' || project.category === categoryFilter;
-            return matchesSearch && matchesCategory;
+            return matchesSearch;
         });
-    }, [projects, searchQuery, categoryFilter]);
+    }, [projects, searchQuery]);
 
 
     return (
@@ -82,8 +80,6 @@ const ProjectsTable = () => {
             <TableController
                 searchQuery={searchQuery}
                 setSearchQuery={setSearchQuery}
-                categoryFilter={categoryFilter}
-                setCategoryFilter={setCategoryFilter}
             />
 
             {/* DESKTOP VIEW */}
@@ -96,10 +92,7 @@ const ProjectsTable = () => {
                                     Project
                                 </th>
                                 <th className="text-left py-4 px-6 text-sm font-semibold text-gray-300 uppercase bg-gray-900/95">
-                                    Category
-                                </th>
-                                <th className="text-left py-4 px-6 text-sm font-semibold text-gray-300 uppercase bg-gray-900/95">
-                                    Stack
+                                    Technology
                                 </th>
                                 <th className="text-center py-4 px-6 text-sm font-semibold text-gray-300 uppercase bg-gray-900/95">
                                     Links
@@ -131,15 +124,6 @@ const ProjectsTable = () => {
                                                 />
                                                 <p className="text-white">{project?.title}</p>
                                             </div>
-                                        </td>
-
-                                        <td className="px-5">
-                                            <span className={`inline-flex px-3 py-1 text-xs rounded-full capitalize ${project.category === 'frontend'
-                                                ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20'
-                                                : 'bg-green-500/10 text-green-400 border border-green-500/20'
-                                                }`}>
-                                                {project.category}
-                                            </span>
                                         </td>
 
                                         <td className="px-5">
@@ -223,12 +207,6 @@ const ProjectsTable = () => {
                                 />
                                 <div className="flex-1">
                                     <h3 className="text-white font-bold text-lg mb-2">{project.title}</h3>
-                                    <span className={`inline-flex px-3 py-1 text-xs rounded-full capitalize ${project.category === 'frontend'
-                                        ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
-                                        : 'bg-green-500/20 text-green-400 border border-green-500/30'
-                                        }`}>
-                                        {project.category}
-                                    </span>
                                 </div>
 
                                 <div className="relative">

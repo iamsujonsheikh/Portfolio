@@ -27,7 +27,7 @@ const Skill = ({ selectSkill }: { selectSkill: SelectSkillProps }) => {
           height={50}
           src={selectSkill.img}
           alt="tech-icon"
-          className="duration-500 group-hover:scale-125"
+          className="duration-500 group-hover:scale-125 w-[50px] h-[50px]"
         />
       </div>
 

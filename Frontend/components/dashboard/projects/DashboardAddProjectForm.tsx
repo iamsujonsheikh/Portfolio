@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { Plus, X } from 'lucide-react';
-import { categorieProjects } from '../utils/DashboardData';
 import { ProjectFormData } from '../types/DashboardTypes';
 import BackgroundBlobs from '../UI/BackgroundBlobs';
 import CustomButton from '../UI/CustomButton';
@@ -20,7 +19,6 @@ const DashboardAddProjectForm: React.FC<AddProjectFormProps> = ({ onSubmit, onCl
     const [formData, setFormData] = useState<ProjectFormData>({
         title: '',
         img: '',
-        category: 'fullstack',
         live: '',
         code: '',
         technologies: [],
@@ -87,7 +85,6 @@ const DashboardAddProjectForm: React.FC<AddProjectFormProps> = ({ onSubmit, onCl
         setFormData({
             title: '',
             img: '',
-            category: 'fullstack',
             live: '',
             code: '',
             technologies: [],
@@ -167,7 +164,7 @@ const DashboardAddProjectForm: React.FC<AddProjectFormProps> = ({ onSubmit, onCl
                 </div>
 
                 {/* IMAGE UPLOAD & CATEGORY */}
-                <div className='flex justify-between space-x-2 sm:space-x-4 items-center sm:my-3'>
+                <div>
                     <UploadImage
                         imagePreview={imagePreview}
                         OnHandleImageUpload={handleImageUpload}
@@ -176,39 +173,9 @@ const DashboardAddProjectForm: React.FC<AddProjectFormProps> = ({ onSubmit, onCl
                             setFormData({ ...formData, img: value });
                         }}
                         levelText='Project Cover Photo'
-                        className='w-3/4'
+                        className='w-full'
                     />
 
-                    {/* CATEGORY */}
-                    <div>
-                        <label className="block text-slate-300 text-sm font-medium mb-2 font-mono">
-                            Category
-                        </label>
-                        <div className="space-y-2">
-                            {categorieProjects.map((cat) => {
-                                const isSelected = formData.category === cat.value;
-                                return (
-                                    <label
-                                        key={cat.value}
-                                        className={`flex-1 flex items-center justify-center px-3 py-2 rounded-lg border cursor-pointer transition-all duration-200 ${isSelected
-                                            ? 'border-blue-500 bg-blue-500/10 text-blue-400'
-                                            : 'border-white/10 bg-white/5 text-slate-400 hover:border-white/20 hover:bg-white/10'
-                                            }`}
-                                    >
-                                        <input
-                                            type="radio"
-                                            name="category"
-                                            value={cat.value}
-                                            checked={isSelected}
-                                            onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                                            className="sr-only"
-                                        />
-                                        <span className="text-sm font-medium">{cat.label}</span>
-                                    </label>
-                                );
-                            })}
-                        </div>
-                    </div>
                 </div>
 
                 {/* LIVE & CODE URL */}

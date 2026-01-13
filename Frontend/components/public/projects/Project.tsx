@@ -38,8 +38,6 @@ const Project = ({ project }: { project: IProjectProps }) => {
           className="absolute inset-0 rounded-2xl"
         />
 
-
-
         <Link href={live} target="_blank">
           <div className="absolute bottom-2 hover:scale-105 duration-500 cursor-pointer w-[70%] sm:w-[90%]  left-1/2 -translate-x-1/2 rounded-xl border-2 shadow border-amber-200/10 bg-[#121821]/50 h-14 sm:h-12 flex items-center justify-between px-2 backdrop-blur-md">
 

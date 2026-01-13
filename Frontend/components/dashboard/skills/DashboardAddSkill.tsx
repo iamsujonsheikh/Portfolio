@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+"use client"
+
+import { useState } from 'react'
 import DashboardAddSkillForm from './DashboardAddSkillForm';
 import BackgroundBlobs from '../UI/BackgroundBlobs';
 import CustomButton from '../UI/CustomButton';
@@ -20,7 +22,6 @@ const DashboardAddSkill = () => {
 
     // HANDLE SUBMIT SKILL FORM
     const handleSubmitSkill = (skill: any) => {
-        console.log('Skill added:', skill);
         setShowSkillForm(false);
     };
 
@@ -52,7 +53,7 @@ const DashboardAddSkill = () => {
                 {/* CUSTOM BUTTON */}
                 <div className="flex-shrink-0">
                     <CustomButton
-                        openForm={handleOpenForm}
+                        onClick={handleOpenForm}
                         className='rounded-xl'
                     >
                         Add New Skill

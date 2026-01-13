@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 // SKILL FORM DATA
 export interface SkillFormData {
     title: string;
@@ -10,7 +12,6 @@ export interface SkillFormData {
 export interface ProjectFormData {
     title: string;
     img: string;
-    category: string;
     live: string;
     code: string;
     technologies: string[];
@@ -27,7 +28,7 @@ export interface Skill {
 export interface ISkills {
     title: string;
     semiTitle: string;
-    icon: React.ElementType;
+    icon: ReactNode;
     skills: Skill[];
     isFullWidth?: boolean;
 };

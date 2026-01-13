@@ -1,4 +1,3 @@
-import React from 'react'
 import { IconBulb, IconCode, IconRocket } from '@tabler/icons-react'
 import DashboardProjectCard from '@/components/dashboard/projects/DashboardProjectCard';
 import SexyProjectsTable from '@/components/dashboard/projects/ProjectsTable';

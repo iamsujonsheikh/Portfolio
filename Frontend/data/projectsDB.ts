@@ -1,11 +1,11 @@
 import { IProjects } from "@/types";
 
+
 export const projectsDB: IProjects[] = [
   {
     id: "1",
     title: "Travell Lodge",
     img: "https://i.ibb.co/Lz3WJSB/travel-Lodge.png",
-    category: "fullstack",
     live: "https://travellodge.vercel.app/",
     code: "https://github.com/sujoncoder/Travel_Lodge",
     technologies: [
@@ -33,7 +33,6 @@ export const projectsDB: IProjects[] = [
     id: "2",
     title: "Movies Filter",
     img: "https://i.ibb.co/LgmWy29/mvs-filter.png",
-    category: "frontend",
     live: "https://movies-filter-six.vercel.app/",
     code: "https://github.com/sujoncoder/Movies_Filter",
     technologies: ["Next.js", "Tailwind-css", "motion/react"],
@@ -43,7 +42,6 @@ export const projectsDB: IProjects[] = [
     id: "3",
     title: "E-comerce-Filter",
     img: "https://i.ibb.co/NykvGFB/e-comerce-Filter.png",
-    category: "frontend",
     live: "https://64ae424e7f207e04bae8244d--taupe-froyo-d808df.netlify.app/",
     code: "https://github.com/sujonphero/E-commerce_advance_filtering",
     technologies: ["React", "Tailwind-css"],
@@ -53,7 +51,6 @@ export const projectsDB: IProjects[] = [
     id: "4",
     title: "Learnify",
     img: "https://i.ibb.co/JqqV79t/learnify.png",
-    category: "fullstack",
     live: "https://learnify-lms.vercel.app/",
     code: "https://github.com/sujoncoder/Learnify",
     technologies: [
@@ -81,48 +78,8 @@ export const projectsDB: IProjects[] = [
   },
   {
     id: "5",
-    title: "Dev Portfolio",
-    img: "https://i.ibb.co/YPfpYZm/dev-Portfolio.png",
-    category: "frontend",
-    live: "https://luxury-nasturtium-c2095c.netlify.app/",
-    code: "https://github.com/sujonphero/React_Awesome_Portfolio",
-    technologies: ["React", "Tailwind-css"],
-    description: ["Developer portfolio website."],
-  },
-  {
-    id: "6",
-    title: "Google-Lite",
-    img: "https://i.ibb.co/PDtptdq/google-lite.png",
-    category: "frontend",
-    live: "https://google-lite.vercel.app/",
-    code: "https://github.com/sujoncoder/Google-Lite",
-    technologies: [
-      "Next.js",
-      "Tailwind-css",
-      "React-icons",
-      "Google engine API",
-    ],
-    description: ["Google search implement."],
-  },
-  {
-    id: "7",
-    title: "mini-IMDB",
-    img: "https://i.ibb.co/YQVXL0c/mini-IMDB.png",
-    category: "frontend",
-    live: "https://mini-imdb.vercel.app/",
-    code: "https://github.com/sujoncoder/Mini-IMDB",
-    technologies: ["Next.js", "Tailwind-css", "React-icons"],
-    description: [
-      "mini-IMDB Movies portal using TMDB database.",
-      "Showing trendings movies.",
-      "Showing movies rating and from user.",
-    ],
-  },
-  {
-    id: "8",
     title: "Food Beast",
     img: "https://i.ibb.co/72872K9/foodbeast.png",
-    category: "frontend",
     live: "https://food-beast.vercel.app/",
     code: "https://github.com/sujoncoder/FoodBeast",
     technologies: [
@@ -143,20 +100,9 @@ export const projectsDB: IProjects[] = [
     ],
   },
   {
-    id: "9",
-    title: "Password Generator",
-    img: "https://i.ibb.co/zr7hZSM/passwordgen.png",
-    category: "frontend",
-    live: "https://symphonious-puffpuff-fc6d5b.netlify.app/",
-    code: "https://github.com/sujonphero/More_React/tree/main/Password_Genarator",
-    technologies: ["React", "Tailwind-css"],
-    description: ["React password generator."],
-  },
-  {
-    id: "10",
+    id: "6",
     title: "Tooly-Zone",
     img: "https://i.ibb.co/GtMx35y/tooly-Zone.png",
-    category: "frontend",
     live: "https://tolly-zone.vercel.app/",
     code: "https://github.com/sujoncoder/ToolyZone",
     technologies: ["Next.js", "Tailwind-css", "React-icons"],
@@ -168,20 +114,9 @@ export const projectsDB: IProjects[] = [
     ],
   },
   {
-    id: "11",
-    title: "Tic-Tac-Toe",
-    img: "https://i.ibb.co/9N5wqZ0/tiktaktoe.png",
-    category: "frontend",
-    live: "https://tic-tac-toe-ten-theta-12.vercel.app/",
-    code: "https://github.com/sujoncoder/Tic-Tac-Toe",
-    technologies: ["React", "Tailwind-css", "React-icons"],
-    description: ["Tic-Tac-Toe web game."],
-  },
-  {
-    id: "12",
+    id: "7",
     title: "Jerin Parlour",
     img: "https://i.ibb.co/Z81GK2Y/jerinparlour.png",
-    category: "frontend",
     live: "https://jerin-s-parlour.vercel.app/",
     code: "https://github.com/sujoncoder/Jerin-s-Parlour",
     technologies: [
@@ -199,28 +134,6 @@ export const projectsDB: IProjects[] = [
       "Admin can post Item.",
       "User can booked her order any item.",
     ],
-  },
-
-  {
-    id: "13",
-    title: "Storiyfy",
-    img: "https://i.ibb.co.com/XpTTCwn/stroryify.png",
-    category: "fullstack",
-    live: "https://stroryify.vercel.app/",
-    code: "https://github.com/sujoncoder/Stroryify",
-    technologies: [
-      "Next.js",
-      "Tailwind-css",
-      "React-icons",
-      "Node.js",
-      "MongoDB",
-      "Mongoose",
-      "React-hot-toast",
-    ],
-    description: [
-      "User can read  blog post.",
-      "User can create and manage blog post.",
-    ],
-  },
+  }
 ];
 export default projectsDB;

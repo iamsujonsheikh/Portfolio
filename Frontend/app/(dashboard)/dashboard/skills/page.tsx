@@ -1,5 +1,3 @@
-"use client"
-
 import DashboardAddSkill from "@/components/dashboard/skills/DashboardAddSkill";
 import DashboardAllSkillCard from "@/components/dashboard/skills/DashboardAllSkillCard";
 

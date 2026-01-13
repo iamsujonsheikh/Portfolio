@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import Image from 'next/image';
 import { Skill } from '../types/DashboardTypes';
 import BackgroundBlobs from '../UI/BackgroundBlobs';
@@ -10,7 +10,7 @@ import BackgroundBlobs from '../UI/BackgroundBlobs';
 interface DashboardSkillCardProps {
     title: string;
     description: string;
-    icon?: any;
+    icon?: ReactNode;
     skills: Skill[];
     isFullWidth?: boolean;
     colorScheme?: {
@@ -18,12 +18,12 @@ interface DashboardSkillCardProps {
         secondary: string;
         accent: string;
     }
-};
+}
 
 const DashboardSkillCard: React.FC<DashboardSkillCardProps> = ({
     title,
     description,
-    icon: Icon,
+    icon,
     skills,
     isFullWidth,
     colorScheme = {}
@@ -40,9 +40,10 @@ const DashboardSkillCard: React.FC<DashboardSkillCardProps> = ({
 
             {/* HEADER */}
             <div className="flex items-start gap-5">
-                <div className="inline-flex items-center justify-center w-10 h-10 bg-slate-500/30 rounded-full shadow-lg shadow-green-500/20 group-hover:shadow-green-500/40 transition-shadow flex-shrink-0">
-                    <Icon className="w-6 h-6 text-white/50" />
+                <div className="inline-flex items-center justify-center w-10 h-10 bg-slate-500/30 rounded-full shadow-lg">
+                    {icon}
                 </div>
+
                 <div className="flex-1">
                     <h3 className={`text-xl font-bold bg-gradient-to-r ${colorScheme.accent} bg-clip-text text-transparent mb-2`}>
                         {title}
@@ -50,6 +51,7 @@ const DashboardSkillCard: React.FC<DashboardSkillCardProps> = ({
                     <p className="text-slate-300 text-sm">{description}</p>
                 </div>
             </div>
+
 
             {/* SKILLS IMAGES */}
             <div className="relative mt-10">

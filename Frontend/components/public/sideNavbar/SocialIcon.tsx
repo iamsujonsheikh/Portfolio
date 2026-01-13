@@ -4,11 +4,11 @@ const SocialIcon = () => {
   return (
     <div className="hidden md:flex justify-center md:justify-normal space-x-3 my-4 bg-neutral-500/10 border border-neutral-500/20 px-5 py-2 rounded-full">
 
-      <a target="_blank" href="https://www.linkedin.com/in/sujonsheikh/">
+      <a target="_blank" href="https://www.linkedin.com/in/iamsujonsheikh/">
         <IconBrandLinkedin className="w-7 h-7 text-[#5cc48a] hover:scale-125 duration-500 cursor-pointer" />
       </a>
 
-      <a target="_blank" href="https://github.com/sujoncoder">
+      <a target="_blank" href="https://github.com/iamsujonsheikh">
         <IconBrandGithub className="w-7 h-7 text-[#5cc48a] hover:scale-125 duration-500 cursor-pointer" />
       </a>
 

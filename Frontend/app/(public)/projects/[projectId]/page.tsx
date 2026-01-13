@@ -2,13 +2,15 @@ import Image from "next/image";
 import projects from "@/data/projectsDB";
 
 
-const ProjectDetails = ({ params }: { params: { projectId: string } }) => {
-  const currentId = projects.find((project) => project.id === params.projectId);
+// PROJECT DETAILS PAGE
+const ProjectDetails = async ({ params }: { params: { projectId: string } }) => {
+
+  const { projectId } = await params;
+  const currentId = projects.find((project) => project.id === projectId);
 
   if (!currentId) return <p>Project not found</p>;
 
-  const { title, img, category, live, code, technologies, description } =
-    currentId;
+  const { title, img, live, code, technologies, description } = currentId;
 
   return (
     <div className="max-w-4xl mx-auto p-5">
@@ -23,18 +25,7 @@ const ProjectDetails = ({ params }: { params: { projectId: string } }) => {
       <div className="space-y-5">
         <h1 className="text-3xl font-bold text-[#5cc48a]">{title}</h1>
 
-        {/* Category */}
-        <div className="flex items-center gap-2">
-          <Image src="/assets/icons/category.png" alt={title} width={32} height={32} />
-          <p className="text-lg text-slate-200 ">
-            <strong>Category :</strong>{" "}
-          </p>
-          <span className="text-slate-300 uppercase bg-sky-500 bg-opacity-20 px-4 py-1 rounded-full shadow ml-2">
-            {category}
-          </span>
-        </div>
-
-        {/* Description */}
+        {/* DESCRIPTION */}
         <div className="items-center gap-2">
           <div className="flex gap-2 mb-2">
             <Image src="/assets/icons/description.png" alt={title} width={32} height={32} />
@@ -55,7 +46,7 @@ const ProjectDetails = ({ params }: { params: { projectId: string } }) => {
           </div>
         </div>
 
-        {/* Technologies */}
+        {/* TECHNOLOGIES */}
         <div className="space-y-2">
           <div className="flex flex-col">
             <div className="flex items-center mb-4 gap-2">
@@ -75,7 +66,7 @@ const ProjectDetails = ({ params }: { params: { projectId: string } }) => {
           </div>
         </div>
 
-        {/* Live & Code Links */}
+        {/* LIVE & CODE LINKS */}
         <div className="flex space-x-4">
           <a
             target="_blank"

@@ -6,7 +6,7 @@ import SkillsTextContent from "@/components/public/skills/SkillsTextContent";
 import SkillsFilter from "@/components/public/skills/SkillsFilter";
 import SkillsList from "@/components/public/skills/SkillsList";
 
-const Skills = () => {
+const SkillsPage = () => {
   const [filteredSkills, setFilteredSkills] = useState(SkillsData);
   const [selectedCategory, setSelectedCategory] = useState("all");
 
@@ -34,4 +34,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default SkillsPage;
