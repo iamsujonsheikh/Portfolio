@@ -1,9 +1,9 @@
 const WhatIDo = () => {
   return (
     <div className="space-y-4 mt-6 sm:mt-6">
-      <h1 className="text-slate-200 text-3xl border-l-4 border-[#5cc48a] px-2">
+      <h2 className="text-slate-200 text-3xl border-l-4 border-brand px-2">
         What I Do
-      </h1>
+      </h2>
       <p className="text-slate-300 text-xl">
         Welcome! Here's what I do as a Full-Stack Javascript developer.
       </p>

@@ -1,44 +1,35 @@
-import { SkillCategory } from "@/types";
+import type { SkillCategory } from "@/types";
+
+const categories: { value: SkillCategory; label: string }[] = [
+  { value: "all", label: "All" },
+  { value: "programming", label: "Programming" },
+  { value: "web", label: "Web" },
+  { value: "tools", label: "Tools" },
+];
 
 interface SkillsFilterProps {
-  onFilterSkillByCategory: (category: SkillCategory) => void;
-  onSelectCategory: string;
+  selectedCategory: SkillCategory;
+  onSelect: (category: SkillCategory) => void;
 }
 
-const SkillsFilter = ({ onFilterSkillByCategory, onSelectCategory }: SkillsFilterProps) => {
+const SkillsFilter = ({ selectedCategory, onSelect }: SkillsFilterProps) => {
   return (
-    <div className="flex space-x-2 sm:space-x-4 items-center my-10">
-      <button
-        onClick={() => onFilterSkillByCategory("all")}
-        className={`px-4 py-2 rounded shadow font-medium text-slate-100 cursor-pointer ${onSelectCategory === "all" ? "bg-[#5cc48a]" : "bg-[#32455b]"
-          }`}
-      >
-        All
-      </button>
-
-      <button
-        onClick={() => onFilterSkillByCategory("programming")}
-        className={`px-4 py-2 rounded shadow font-medium text-slate-100 cursor-pointer ${onSelectCategory === "programming" ? "bg-[#5cc48a]" : "bg-[#32455b]"
-          }`}
-      >
-        Programming
-      </button>
-
-      <button
-        onClick={() => onFilterSkillByCategory("web")}
-        className={`px-4 py-2 rounded shadow font-medium text-slate-100 cursor-pointer ${onSelectCategory === "web" ? "bg-[#5cc48a]" : "bg-[#32455b]"
-          }`}
-      >
-        Web
-      </button>
-
-      <button
-        onClick={() => onFilterSkillByCategory("tools")}
-        className={`px-4 py-2 rounded shadow font-medium text-slate-100 cursor-pointer ${onSelectCategory === "tools" ? "bg-[#5cc48a]" : "bg-[#32455b]"
-          }`}
-      >
-        Tools
-      </button>
+    <div className="flex flex-wrap gap-2 sm:gap-4 items-center my-10" role="group" aria-label="Filter skills by category">
+      {categories.map(({ value, label }) => {
+        const active = selectedCategory === value;
+        return (
+          <button
+            key={value}
+            type="button"
+            onClick={() => onSelect(value)}
+            aria-pressed={active}
+            className={`px-4 py-2 rounded shadow font-medium cursor-pointer duration-200 ${active ? "bg-brand text-slate-900" : "bg-panel-light text-slate-100 hover:bg-panel-light/80"
+              }`}
+          >
+            {label}
+          </button>
+        );
+      })}
     </div>
   );
 };

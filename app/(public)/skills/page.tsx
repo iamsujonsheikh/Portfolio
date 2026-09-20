@@ -1,35 +1,18 @@
-"use client";
+import type { Metadata } from "next";
+import SkillsExplorer from "@/components/skills/SkillsExplorer";
+import SkillsTextContent from "@/components/skills/AboutTextContent";
 
-import { useState } from "react";
-import SkillsData from "@/data/skillsDB";
-import SkillsTextContent from "@/components/skills/SkillsTextContent";
-import SkillsFilter from "@/components/skills/SkillsFilter";
-import SkillsList from "@/components/skills/SkillsList";
+export const metadata: Metadata = {
+  title: "Skills",
+  description:
+    "Technologies and tools Sujon Sheikh works with: JavaScript, TypeScript, React, Next.js, Node.js, MongoDB and more.",
+};
 
 const SkillsPage = () => {
-  const [filteredSkills, setFilteredSkills] = useState(SkillsData);
-  const [selectedCategory, setSelectedCategory] = useState("all");
-
-  const filterSkillByCategory = (category: string) => {
-    if (category === "all") {
-      setFilteredSkills(SkillsData);
-    } else {
-      const filtered = SkillsData.filter(
-        (skill) => skill.category === category
-      );
-      setFilteredSkills(filtered);
-    }
-    setSelectedCategory(category);
-  };
-
   return (
     <div>
       <SkillsTextContent />
-      <SkillsFilter
-        onFilterSkillByCategory={filterSkillByCategory}
-        onSelectCategory={selectedCategory}
-      />
-      <SkillsList onCategory={filteredSkills} />
+      <SkillsExplorer />
     </div>
   );
 };

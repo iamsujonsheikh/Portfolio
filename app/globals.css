@@ -1,8 +1,16 @@
 @import "tailwindcss";
-@import "tw-animate-css";
-
 
 @custom-variant dark (&:is(.dark *));
+
+
+/* Site color tokens: use as bg-surface, bg-panel, text-brand, bg-brand ... */
+@theme {
+  --color-surface: #121821;
+  --color-panel: #1f2a39;
+  --color-panel-light: #32455b;
+  --color-brand: #5cc48a;
+  --color-brand-dark: #1b864b;
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -42,13 +50,6 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 :root {
@@ -125,7 +126,12 @@
     @apply border-border outline-ring/50;
   }
 
+  html {
+    color-scheme: dark;
+    background-color: var(--color-surface);
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-surface text-slate-200;
   }
 }

@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sujon Sheikh | Portfolio
 
-## Getting Started
+Personal portfolio of **Sujon Sheikh**, a Full-Stack JavaScript developer.
+Built with Next.js (App Router), React, TypeScript and Tailwind CSS.
 
-First, run the development server:
+- **Live site:** _add your deployed URL here_
+- **Pages:** About, Work Experience, Skills, Projects (+ detail pages), Blog (coming soon), Contact
+
+<!-- Add a screenshot: ![Portfolio screenshot](./public/screenshot.png) -->
+
+## Tech stack
+
+Next.js 16 · React 19 · TypeScript · Tailwind CSS v4 · Motion · Tabler Icons
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Script              | What it does                     |
+| ------------------- | -------------------------------- |
+| `npm run dev`       | Start the dev server (Turbopack) |
+| `npm run build`     | Production build                 |
+| `npm run start`     | Serve the production build       |
+| `npm run lint`      | Run ESLint                       |
+| `npm run typecheck` | Run the TypeScript compiler      |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Editing content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All content lives in `data/`. No component changes needed:
 
-## Learn More
+- `data/projectsDB.ts`: projects (the `id` is the URL slug: `/projects/<id>`). Each project has a `role`, a `year` and a `featured` flag; only `featured: true` projects are shown by default on the Projects page (aim for 4-5)
+- `data/experienceDB.ts`: work experience shown on the `/experience` page as a vertical stepper (newest first). `about`, `responsibilities`, `highlights` and `technologies` are optional and show up on the card automatically. Freelance work is the separate `freelanceWork` entry in the same file
+- `data/skillsDB.ts`: skills (`rating` is 1 to 5, shown as stars)
+- `data/socials.ts`: email, phone, WhatsApp and every social link (used across the whole site)
 
-To learn more about Next.js, take a look at the following resources:
+Put the Google Drive link of your resume PDF in `data/Socials.ts` (`resumeUrl`). The "View Resume" button opens it in a new tab, and stays hidden until the link is set. In Drive: right-click the PDF, Share, General access: "Anyone with the link" (Viewer), Copy link.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` to your real domain.
+It is used for the sitemap, Open Graph tags and the share-preview image.
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploy on [Vercel](https://vercel.com/new) and add `NEXT_PUBLIC_SITE_URL` in the project settings.

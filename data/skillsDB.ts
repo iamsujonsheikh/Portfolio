@@ -5,280 +5,199 @@ const skillsDB: ISkills[] = [
   {
     id: 1,
     title: "AWS",
-    img: "https://i.ibb.co.com/9H13sMFW/aws.png",
+    img: "/assets/skills/aws.webp",
     category: "tools",
-    level: "⭐"
-  },
-  {
-    id: 2,
-    title: "Canva",
-    img: "https://i.ibb.co.com/k6kQtWWS/canva.png",
-    category: "tools",
-    level: "⭐⭐⭐⭐"
+    rating: 1
   },
   {
     id: 3,
     title: "Bun",
-    img: "https://i.ibb.co.com/cc933bfr/bun.png",
+    img: "/assets/skills/bun.webp",
     category: "tools",
-    level: "⭐⭐"
+    rating: 2
   },
   {
     id: 4,
     title: "Docker",
-    img: "https://i.ibb.co.com/v4Tfpz39/docker.png",
+    img: "/assets/skills/docker.webp",
     category: "tools",
-    level: "⭐⭐"
+    rating: 2
   },
   {
     id: 5,
     title: "CSS",
-    img: "https://i.ibb.co.com/nN7ZT3rg/css.png",
+    img: "/assets/skills/css.webp",
     category: "web",
-    level: "⭐⭐⭐⭐"
+    rating: 4
   },
   {
     id: 6,
     title: "Express",
-    img: "https://i.ibb.co.com/7JQH6Ff9/express.png",
+    img: "/assets/skills/express.webp",
     category: "web",
-    level: "⭐⭐⭐⭐"
+    rating: 4
   },
   {
     id: 7,
     title: "Figma",
-    img: "https://i.ibb.co.com/6RmCNvZc/figma.png",
+    img: "/assets/skills/figma.webp",
     category: "tools",
-    level: "⭐⭐⭐⭐"
+    rating: 4
   },
   {
     id: 8,
     title: "Firebase",
-    img: "https://i.ibb.co.com/kVSGdCDq/firebase.png",
+    img: "/assets/skills/firebase.webp",
     category: "web",
-    level: "⭐⭐⭐"
+    rating: 3
   },
   {
     id: 9,
     title: "Git",
-    img: "https://i.ibb.co.com/p6Phk38s/git.png",
+    img: "/assets/skills/git.webp",
     category: "tools",
-    level: "⭐⭐⭐⭐"
+    rating: 4
   },
   {
     id: 10,
     title: "Go",
-    img: "https://i.ibb.co.com/kVmvy0Nr/go.png",
+    img: "/assets/skills/golang.webp",
     category: "web",
-    level: "⭐⭐"
+    rating: 2
   },
   {
     id: 11,
     title: "HTML",
-    img: "https://i.ibb.co.com/Ld2pN7qY/html.png",
+    img: "/assets/skills/html.webp",
     category: "web",
-    level: "⭐⭐⭐⭐⭐"
+    rating: 5
   },
   {
     id: 12,
     title: "GitHub",
-    img: "https://i.ibb.co.com/NgsFgWQT/github.png",
+    img: "/assets/skills/github.webp",
     category: "tools",
-    level: "⭐⭐⭐⭐⭐"
+    rating: 5
   },
   {
     id: 13,
     title: "Jest",
-    img: "https://i.ibb.co.com/YB9rS50R/jest.webp",
+    img: "/assets/skills/jest.webp",
     category: "tools",
-    level: "⭐⭐⭐"
+    rating: 3
   },
   {
     id: 14,
     title: "JavaScript",
-    img: "https://i.ibb.co.com/Z11wK1BX/js.png",
+    img: "/assets/skills/javascript.webp",
     category: "programming",
-    level: "⭐⭐⭐⭐"
+    rating: 4
   },
   {
     id: 15,
     title: "Linux",
-    img: "https://i.ibb.co.com/RKCQbx4/linux.webp",
+    img: "/assets/skills/linux.webp",
     category: "tools",
-    level: "⭐⭐⭐"
+    rating: 3
   },
   {
     id: 16,
     title: "MongoDB",
-    img: "https://i.ibb.co.com/dyshHNV/mongodb.webp",
+    img: "/assets/skills/mongodb.webp",
     category: "web",
-    level: "⭐⭐⭐⭐"
+    rating: 4
   },
   {
     id: 17,
     title: "Mongoose",
-    img: "https://i.ibb.co.com/SXXCsmkZ/mongoose.png",
+    img: "/assets/skills/mongoose.webp",
     category: "web",
-    level: "⭐⭐⭐⭐"
-  },
-  {
-    id: 18,
-    title: "Netlify",
-    img: "https://i.ibb.co.com/PSm9GD5/netlify.png",
-    category: "tools",
-    level: "⭐⭐⭐⭐⭐"
+    rating: 4
   },
   {
     id: 19,
     title: "React Motion",
-    img: "https://i.ibb.co.com/wrJGtRw4/motion.png",
+    img: "/assets/skills/motion.webp",
     category: "web",
-    level: "⭐⭐⭐"
+    rating: 3
   },
   {
     id: 20,
     title: "Next.js",
-    img: "https://i.ibb.co.com/nNRPvBTy/nextjs.png",
+    img: "/assets/skills/next.webp",
     category: "web",
-    level: "⭐⭐⭐⭐"
+    rating: 4
   },
   {
     id: 21,
     title: "Node.js",
-    img: "https://i.ibb.co.com/r26cH7PC/node.png",
+    img: "/assets/skills/node.webp",
     category: "web",
-    level: "⭐⭐⭐⭐"
-  },
-  {
-    id: 22,
-    title: "npm",
-    img: "https://i.ibb.co.com/sMR2qwL/npm.png",
-    category: "tools",
-    level: "⭐⭐⭐⭐⭐"
+    rating: 4
   },
   {
     id: 23,
     title: "PostgreSQL",
-    img: "https://i.ibb.co.com/qMFLgvHQ/postgres.png",
+    img: "/assets/skills/postgres.webp",
     category: "web",
-    level: "⭐⭐⭐"
+    rating: 3
   },
   {
     id: 24,
     title: "Postman",
-    img: "https://i.ibb.co.com/hxvh2mzR/postman.webp",
+    img: "/assets/skills/postman.webp",
     category: "tools",
-    level: "⭐⭐⭐⭐⭐"
+    rating: 5
   },
   {
     id: 25,
     title: "Prisma",
-    img: "https://i.ibb.co.com/fGD6M3y4/prisma.png",
+    img: "/assets/skills/prisma.webp",
     category: "web",
-    level: "⭐⭐⭐"
+    rating: 3
   },
   {
     id: 26,
     title: "React",
-    img: "https://i.ibb.co.com/wZhYp0p9/react.png",
+    img: "/assets/skills/react.webp",
     category: "web",
-    level: "⭐⭐⭐⭐⭐"
+    rating: 5
   },
   {
     id: 27,
     title: "Redux",
-    img: "https://i.ibb.co.com/HLGWZn5b/redux.png",
+    img: "/assets/skills/redux.webp",
     category: "web",
-    level: "⭐⭐⭐⭐⭐"
-  },
-  {
-    id: 28,
-    title: "Shadcn UI",
-    img: "https://i.ibb.co.com/Jw45NS1h/shadcn.png",
-    category: "web",
-    level: "⭐⭐⭐⭐⭐"
+    rating: 5
   },
   {
     id: 29,
     title: "Tailwind CSS",
-    img: "https://i.ibb.co.com/cKDszT11/tailwind.png",
+    img: "/assets/skills/tailwind.webp",
     category: "web",
-    level: "⭐⭐⭐⭐"
+    rating: 4
   },
   {
     id: 30,
     title: "TypeScript",
-    img: "https://i.ibb.co.com/HyXw1Zj/ts.png",
+    img: "/assets/skills/typescript.webp",
     category: "programming",
-    level: "⭐⭐⭐⭐"
+    rating: 4
   },
   {
     id: 31,
     title: "Vercel",
-    img: "https://i.ibb.co.com/S7J876FF/vercel.webp",
+    img: "/assets/skills/vercel.webp",
     category: "tools",
-    level: "⭐⭐⭐⭐"
-  },
-  {
-    id: 32,
-    title: "Vite",
-    img: "https://i.ibb.co.com/cKX8hcxC/vite.png",
-    category: "tools",
-    level: "⭐⭐⭐⭐"
-  },
-  {
-    id: 33,
-    title: "VS Code",
-    img: "https://i.ibb.co.com/JWXszQgt/vs-code.png",
-    category: "tools",
-    level: "⭐⭐⭐⭐⭐"
+    rating: 4
   },
   {
     id: 34,
     title: "Zod",
-    img: "https://i.ibb.co.com/Xk2tFvmv/zod.png",
+    img: "/assets/skills/zod.webp",
     category: "web",
-    level: "⭐⭐⭐⭐"
+    rating: 4
   }
 ];
+
 export default skillsDB;
-
-
-
-
-
-
-// https://i.ibb.co.com/9H13sMFW/aws.png
-// https://i.ibb.co.com/k6kQtWWS/canva.png
-// https://i.ibb.co.com/cSx2xGzj/bun.png
-// https://i.ibb.co.com/v4Tfpz39/docker.png
-// https://i.ibb.co.com/nN7ZT3rg/css.png
-// https://i.ibb.co.com/MkVdGQXv/express.png
-// https://i.ibb.co.com/6RmCNvZc/figma.png
-// https://i.ibb.co.com/kVSGdCDq/firebase.png
-// https://i.ibb.co.com/p6Phk38s/git.png
-// https://i.ibb.co.com/kVmvy0Nr/go.png
-// https://i.ibb.co.com/Ld2pN7qY/html.png
-// https://i.ibb.co.com/NgsFgWQT/github.png
-// https://i.ibb.co.com/YB9rS50R/jest.webp
-// https://i.ibb.co.com/Z11wK1BX/js.png
-// https://i.ibb.co.com/RKCQbx4/linux.webp
-// https://i.ibb.co.com/dyshHNV/mongodb.webp
-// https://i.ibb.co.com/SXXCsmkZ/mongoose.png
-// https://i.ibb.co.com/PSm9GD5/netlify.png
-// https://i.ibb.co.com/wrJGtRw4/motion.png
-// https://i.ibb.co.com/nNRPvBTy/nextjs.png
-// https://i.ibb.co.com/r26cH7PC/node.png
-// https://i.ibb.co.com/sMR2qwL/npm.png
-// https://i.ibb.co.com/qMFLgvHQ/postgres.png
-// https://i.ibb.co.com/hxvh2mzR/postman.webp
-// https://i.ibb.co.com/CqzgcCD/prisma.png
-// https://i.ibb.co.com/wZhYp0p9/react.png
-// https://i.ibb.co.com/HLGWZn5b/redux.png
-// https://i.ibb.co.com/Jw45NS1h/shadcn.png
-// https://i.ibb.co.com/cKDszT11/tailwind.png
-// https://i.ibb.co.com/HyXw1Zj/ts.png
-// https://i.ibb.co.com/S7J876FF/vercel.webp
-// https://i.ibb.co.com/cKX8hcxC/vite.png
-// https://i.ibb.co.com/JWXszQgt/vs-code.png
-// https://i.ibb.co.com/Xk2tFvmv/zod.png

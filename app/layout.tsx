@@ -1,5 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import MotionProvider from "@/components/providers/MotionProvider";
+import { socialLinks } from "@/data/Socials";
+import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,8 +16,50 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sujon Sheikh | Full-stack Javascript Developer",
-  description: "Sujon Sheikh | Full-stack Javascript Web Developer Portfolio",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  applicationName: `${siteConfig.name} Portfolio`,
+  authors: [{ name: siteConfig.name }],
+  keywords: [
+    "Sujon Sheikh",
+    "Full-Stack JavaScript Developer",
+    "React developer",
+    "Next.js developer",
+    "Node.js",
+    "MongoDB",
+    "MERN stack",
+    "Bangladesh",
+  ],
+  openGraph: {
+    type: "website",
+    siteName: siteConfig.name,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
+  alternates: { canonical: "/" },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#121821",
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: siteConfig.name,
+  jobTitle: siteConfig.jobTitle,
+  url: siteConfig.url,
+  sameAs: socialLinks.map((link) => link.href),
 };
 
 export default function RootLayout({
@@ -23,10 +68,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
+    <html lang="en" className="dark">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+        <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
   );

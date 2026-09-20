@@ -33,8 +33,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/loading.tsx",
-    "components/projects/Project.tsx",
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [

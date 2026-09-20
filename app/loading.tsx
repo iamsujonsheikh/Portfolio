@@ -1,19 +1,10 @@
-"use client";
-
-import React from 'react';
-import { RotatingLines } from "react-loader-spinner";
-
-const Loading: React.FC = () => {
+const Loading = () => {
   return (
-    <div className="flex justify-center items-center h-screen bg-[#121821]">
-      <h1 className="text-slate-400 text-3xl">Loading...</h1>
-      <RotatingLines
-        visible={true}
-        width="50"
-        strokeColor="grey"
-        strokeWidth="5"
-        animationDuration="0.75"
-        ariaLabel="rotating-lines-loading"
+    <div className="flex justify-center items-center gap-3 h-screen bg-surface">
+      <p role="status" className="text-slate-400 text-3xl">Loading...</p>
+      <span
+        aria-hidden="true"
+        className="h-12 w-12 animate-spin rounded-full border-4 border-slate-500 border-t-transparent"
       />
     </div>
   );
